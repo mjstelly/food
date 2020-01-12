@@ -1,34 +1,55 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
-  "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject",
-    "test": "jest"
-  },
-  "dependencies": {
-    "axios": "^0.19.0",
-    "expo": "~36.0.0",
-    "mem": "^6.0.1",
-    "react": "~16.9.0",
-    "react-dom": "~16.9.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
-    "react-native-gesture-handler": "~1.5.0",
-    "react-native-reanimated": "~1.4.0",
-    "react-native-web": "~0.11.7",
-    "react-navigation": "^4.0.10",
-    "react-navigation-stack": "^1.10.3"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.0.0",
-    "babel-preset-expo": "~8.0.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.17.0",
-    "prettier": "^1.19.1"
-  },
-  "private": true
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+        "start": "expo start",
+        "android": "expo start --android",
+        "ios": "expo start --ios",
+        "web": "expo start --web",
+        "eject": "expo eject",
+        "test": "jest"
+    },
+    "dependencies": {
+        "axios": "^0.19.0",
+        "expo": "~36.0.0",
+        "mem": "^6.0.1",
+        "react": "~16.9.0",
+        "react-dom": "~16.9.0",
+        "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
+        "react-native-gesture-handler": "~1.5.0",
+        "react-native-reanimated": "~1.4.0",
+        "react-native-web": "~0.11.7",
+        "react-navigation": "^4.0.10",
+        "react-navigation-stack": "^1.10.3",
+        "react-test-renderer": "^16.12.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.0",
+        "@babel/core": "^7.8.0",
+        "@babel/plugin-transform-arrow-functions": "^7.8.0",
+        "@babel/preset-env": "^7.8.0",
+        "@babel/preset-react": "^7.8.0",
+        "babel-jest": "^24.9.0",
+        "babel-preset-expo": "~8.0.0",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.2",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.9.0",
+        "eslint-plugin-prettier": "^3.1.2",
+        "eslint-plugin-react": "^7.17.0",
+        "jest": "^24.9.0",
+        "jest-enzyme": "^7.1.2",
+        "jest-expo": "^36.0.1",
+        "metro-react-native-babel-preset": "^0.56.4",
+        "prettier": "^1.19.1"
+    },
+    "jest": {
+        "preset": "jest-expo",
+        "transform": {
+            "^.+\\.jsx?$": "babel-jest"
+        },
+        "transformIgnorePatterns": [
+            "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
+        ]
+    },
+    "private": true
 }
