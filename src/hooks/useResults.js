@@ -7,6 +7,7 @@ export default () => {
 
     const searchApi = async searchTerm => {
         try {
+            console.log('hi there');
             const response = await yelp.get('/search', {
                 params: {
                     limit: 50,
@@ -22,6 +23,6 @@ export default () => {
     };
     useEffect(() => {
         searchApi('taco');
-    });
+    }, []);
     return [searchApi, errorMessage, results];
 };
